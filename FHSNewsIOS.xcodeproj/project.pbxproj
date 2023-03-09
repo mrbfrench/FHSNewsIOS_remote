@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0D7053429968A7000464078 /* NewsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D7053329968A7000464078 /* NewsCollectionView.swift */; };
+		B0DCAE6729BA15FB008D0172 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCAE6629BA15FB008D0172 /* WeatherViewController.swift */; };
 		CCFD5774298960780020B8AD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD5773298960780020B8AD /* TableViewController.swift */; };
 		F28D423829685E49008376DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28D423729685E49008376DC /* AppDelegate.swift */; };
 		F28D423A29685E49008376DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28D423929685E49008376DC /* SceneDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0D7053329968A7000464078 /* NewsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionView.swift; sourceTree = "<group>"; };
+		B0DCAE6629BA15FB008D0172 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		CCFD5773298960780020B8AD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		F28D423429685E49008376DC /* FHSNewsIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHSNewsIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28D423729685E49008376DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		F28D423629685E49008376DC /* FHSNewsIOS */ = {
 			isa = PBXGroup;
 			children = (
+				B0D7053329968A7000464078 /* NewsCollectionView.swift */,
 				CCFD5773298960780020B8AD /* TableViewController.swift */,
 				F28D423729685E49008376DC /* AppDelegate.swift */,
 				F28D423929685E49008376DC /* SceneDelegate.swift */,
@@ -109,6 +114,7 @@
 				F28D424029685E4E008376DC /* Assets.xcassets */,
 				F28D424229685E4E008376DC /* LaunchScreen.storyboard */,
 				F28D424529685E4E008376DC /* Info.plist */,
+				B0DCAE6629BA15FB008D0172 /* WeatherViewController.swift */,
 			);
 			path = FHSNewsIOS;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 				TargetAttributes = {
 					F28D423329685E49008376DC = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1330;
 					};
 					F28D424929685E4F008376DC = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -262,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F28D423C29685E49008376DC /* ViewController.swift in Sources */,
+				B0DCAE6729BA15FB008D0172 /* WeatherViewController.swift in Sources */,
 				F28D423829685E49008376DC /* AppDelegate.swift in Sources */,
+				B0D7053429968A7000464078 /* NewsCollectionView.swift in Sources */,
 				F28D423A29685E49008376DC /* SceneDelegate.swift in Sources */,
 				CCFD5774298960780020B8AD /* TableViewController.swift in Sources */,
 			);
@@ -439,6 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RR5WP5NG77;
@@ -458,6 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Bfrench.FHSNewsIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RR5WP5NG77;

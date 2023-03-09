@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cHO-hb-APu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ibE-BQ-8w3">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -69,7 +69,23 @@
             </objects>
             <point key="canvasLocation" x="1995.3846153846152" y="3.5545023696682461"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Weather View Controller-->
+        <scene sceneID="8bI-1p-ses">
+            <objects>
+                <viewController id="7yF-Bz-oG0" customClass="WeatherViewController" customModule="FHSNewsIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pjg-52-Vw1">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XKW-Pn-7Cp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1VS-Cu-Z8t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ksm-PE-Tje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="815"/>
+        </scene>
+        <!--News-->
         <scene sceneID="5Xe-cf-v2S">
             <objects>
                 <viewController id="cHO-hb-APu" customClass="TableViewController" customModule="FHSNewsIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,10 +95,11 @@
                         <viewLayoutGuide key="safeArea" id="bu5-ce-vec"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper.circle.fill" catalog="system" id="ojG-nf-qHO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVc-as-xVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2823.0769230769229" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="135" y="815"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rFK-rT-mIR">
@@ -96,36 +113,99 @@
                     </tabBar>
                     <connections>
                         <segue destination="FTU-FR-2UM" kind="relationship" relationship="viewControllers" id="5in-3X-3mt"/>
+                        <segue destination="cHO-hb-APu" kind="relationship" relationship="viewControllers" id="o57-41-Cle"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQV-4J-QVq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.92307692307691" y="3.5545023696682461"/>
         </scene>
-        <!--Item-->
+        <!--Weather-->
         <scene sceneID="6nf-nC-JHx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FTU-FR-2UM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uNR-XP-RZ7"/>
+                    <tabBarItem key="tabBarItem" title="Weather" image="icloud.circle.fill" catalog="system" id="uNR-XP-RZ7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ctv-4m-XEC">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.92128556969999997" green="0.051691193840000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.92128556969999997" green="0.051691193840000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.92128556969999997" green="0.051691193840000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xKu-Qf-eTf"/>
+                        <segue destination="7yF-Bz-oG0" kind="relationship" relationship="rootViewController" id="Q9e-7m-fuI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CX-ZE-hPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="4"/>
+            <point key="canvasLocation" x="1028" y="-73"/>
+        </scene>
+        <!--FHS News-->
+        <scene sceneID="aFE-Vv-Pv0">
+            <objects>
+                <viewController id="ENb-d2-gc6" customClass="ViewController" customModule="FHSNewsIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSO-bz-VIX">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ohF-2I-dzb">
+                                <rect key="frame" x="16" y="107" width="358" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fundraiser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HB1-rO-JjP">
+                                <rect key="frame" x="16" y="88" width="358" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.62365065980000001" blue="0.56065922599999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.92128556969999997" green="0.49916445539999998" blue="0.39841727179999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7j-at-1MA">
+                                <rect key="frame" x="16" y="231" width="358" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.62365065980000001" blue="0.56065922599999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMP-NC-NL4">
+                                <rect key="frame" x="16" y="364" width="358" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fundraiser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKU-S3-Ovl">
+                                <rect key="frame" x="16" y="345" width="358" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.62365065980000001" blue="0.56065922599999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.92128556969999997" green="0.49916445539999998" blue="0.39841727179999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhd-CQ-nP7">
+                                <rect key="frame" x="16" y="488" width="358" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.62365065980000001" blue="0.56065922599999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j6o-fM-4OV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="cgT-rC-Nta"/>
+                    <navigationItem key="navigationItem" title="FHS News" id="s5z-2r-igH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igM-42-Vv2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-608" y="778"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icloud.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="newspaper.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
