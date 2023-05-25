@@ -69,16 +69,17 @@
             </objects>
             <point key="canvasLocation" x="1995.3846153846152" y="3.5545023696682461"/>
         </scene>
-        <!--Weather View Controller-->
+        <!--Weather-->
         <scene sceneID="8bI-1p-ses">
             <objects>
                 <viewController id="7yF-Bz-oG0" customClass="WeatherViewController" customModule="FHSNewsIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pjg-52-Vw1">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="XKW-Pn-7Cp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Weather" image="cloud.circle.fill2x" id="13X-v7-UKR"/>
                     <navigationItem key="navigationItem" id="1VS-Cu-Z8t"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ksm-PE-Tje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -88,14 +89,14 @@
         <!--News-->
         <scene sceneID="5Xe-cf-v2S">
             <objects>
-                <viewController id="cHO-hb-APu" customClass="TableViewController" customModule="FHSNewsIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cHO-hb-APu" customClass="NewsHomeViewController" customModule="FHSNewsIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OjM-5y-IUP">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bu5-ce-vec"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" image="newspaper.circle.fill" catalog="system" id="ojG-nf-qHO"/>
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper.circle.fill2x" id="ojG-nf-qHO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVc-as-xVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,7 +105,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="rFK-rT-mIR">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ibE-BQ-8w3" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ibE-BQ-8w3" customClass="FHSTabBarController" customModule="FHSNewsIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VjY-D3-7z9">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -112,8 +113,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="FTU-FR-2UM" kind="relationship" relationship="viewControllers" id="5in-3X-3mt"/>
+                        <segue destination="7yF-Bz-oG0" kind="relationship" relationship="viewControllers" id="tqw-zj-wBo"/>
                         <segue destination="cHO-hb-APu" kind="relationship" relationship="viewControllers" id="o57-41-Cle"/>
+                        <segue destination="rX7-fX-ekm" kind="relationship" relationship="viewControllers" id="7vL-Rk-7k3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQV-4J-QVq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -124,13 +126,11 @@
         <scene sceneID="6nf-nC-JHx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FTU-FR-2UM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Weather" image="icloud.circle.fill" catalog="system" id="uNR-XP-RZ7"/>
+                    <tabBarItem key="tabBarItem" title="Weather" image="cloud.circle.fill2x" id="uNR-XP-RZ7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ctv-4m-XEC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ctv-4m-XEC">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.92128556969999997" green="0.051691193840000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" red="0.92128556969999997" green="0.051691193840000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -139,7 +139,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CX-ZE-hPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="-73"/>
+            <point key="canvasLocation" x="1028" y="4"/>
         </scene>
         <!--FHS News-->
         <scene sceneID="aFE-Vv-Pv0">
@@ -200,12 +200,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igM-42-Vv2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-608" y="778"/>
+            <point key="canvasLocation" x="-1468" y="815"/>
+        </scene>
+        <!--Clubs-->
+        <scene sceneID="sJA-mk-3Hy">
+            <objects>
+                <viewController id="rX7-fX-ekm" customClass="TableViewController" customModule="FHSNewsIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ep1-10-cpk">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JBG-e8-Pcj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Clubs" image="newspaper.circle.fill2x" id="827-Ae-2uH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8A-2z-yHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-651" y="815"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q9e-7m-fuI"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="icloud.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="newspaper.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="cloud.circle.fill2x" width="20" height="20"/>
+        <image name="newspaper.circle.fill2x" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

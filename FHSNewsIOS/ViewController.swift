@@ -5,12 +5,14 @@
 //  Created by Brigham French on 1/6/23.
 //
 
+//UPDATE: THIS FILE IS NO LONGER USED
+
 import UIKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
-     
+     //Not used ever in the final app. So, why am I making this comment rather than just simply deleting this file like a sane human would? I have no idea lol.
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let button = UIButton.init()

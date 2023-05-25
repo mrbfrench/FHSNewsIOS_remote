@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01173DC2A0E6C750072F7CD /* NewsHomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01173DB2A0E6C750072F7CD /* NewsHomeCollectionView.swift */; };
+		B01173DE2A0E7D4D0072F7CD /* FHSNewsAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01173DD2A0E7D4D0072F7CD /* FHSNewsAPIHandler.swift */; };
+		B05F1F812A15E7D2004A4DE0 /* NewsArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F1F802A15E7D2004A4DE0 /* NewsArticleView.swift */; };
+		B05F1F832A1669B7004A4DE0 /* FHSNewsClientInfoHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F1F822A1669B7004A4DE0 /* FHSNewsClientInfoHandler.swift */; };
+		B0604DA429D32142002E2D3D /* ClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0604DA329D32142002E2D3D /* ClubsViewController.swift */; };
 		B0D7053429968A7000464078 /* NewsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D7053329968A7000464078 /* NewsCollectionView.swift */; };
 		B0DCAE6729BA15FB008D0172 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCAE6629BA15FB008D0172 /* WeatherViewController.swift */; };
+		B0E5012929FAA6C900AFEAA2 /* FHSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E5012829FAA6C800AFEAA2 /* FHSTabBarController.swift */; };
 		CCFD5774298960780020B8AD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD5773298960780020B8AD /* TableViewController.swift */; };
 		F28D423829685E49008376DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28D423729685E49008376DC /* AppDelegate.swift */; };
 		F28D423A29685E49008376DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28D423929685E49008376DC /* SceneDelegate.swift */; };
@@ -39,8 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B01173DB2A0E6C750072F7CD /* NewsHomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHomeCollectionView.swift; sourceTree = "<group>"; };
+		B01173DD2A0E7D4D0072F7CD /* FHSNewsAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHSNewsAPIHandler.swift; sourceTree = "<group>"; };
+		B05F1F802A15E7D2004A4DE0 /* NewsArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleView.swift; sourceTree = "<group>"; };
+		B05F1F822A1669B7004A4DE0 /* FHSNewsClientInfoHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHSNewsClientInfoHandler.swift; sourceTree = "<group>"; };
+		B0604DA329D32142002E2D3D /* ClubsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsViewController.swift; sourceTree = "<group>"; };
+		B0B622CE29C8955200ECE5F3 /* NoteForDevelopers.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NoteForDevelopers.md; sourceTree = "<group>"; };
 		B0D7053329968A7000464078 /* NewsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionView.swift; sourceTree = "<group>"; };
 		B0DCAE6629BA15FB008D0172 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		B0E5012829FAA6C800AFEAA2 /* FHSTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHSTabBarController.swift; sourceTree = "<group>"; };
 		CCFD5773298960780020B8AD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		F28D423429685E49008376DC /* FHSNewsIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FHSNewsIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28D423729685E49008376DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +128,13 @@
 				F28D424229685E4E008376DC /* LaunchScreen.storyboard */,
 				F28D424529685E4E008376DC /* Info.plist */,
 				B0DCAE6629BA15FB008D0172 /* WeatherViewController.swift */,
+				B0B622CE29C8955200ECE5F3 /* NoteForDevelopers.md */,
+				B0604DA329D32142002E2D3D /* ClubsViewController.swift */,
+				B0E5012829FAA6C800AFEAA2 /* FHSTabBarController.swift */,
+				B01173DB2A0E6C750072F7CD /* NewsHomeCollectionView.swift */,
+				B01173DD2A0E7D4D0072F7CD /* FHSNewsAPIHandler.swift */,
+				B05F1F802A15E7D2004A4DE0 /* NewsArticleView.swift */,
+				B05F1F822A1669B7004A4DE0 /* FHSNewsClientInfoHandler.swift */,
 			);
 			path = FHSNewsIOS;
 			sourceTree = "<group>";
@@ -270,9 +290,15 @@
 			files = (
 				F28D423C29685E49008376DC /* ViewController.swift in Sources */,
 				B0DCAE6729BA15FB008D0172 /* WeatherViewController.swift in Sources */,
+				B0604DA429D32142002E2D3D /* ClubsViewController.swift in Sources */,
 				F28D423829685E49008376DC /* AppDelegate.swift in Sources */,
+				B05F1F832A1669B7004A4DE0 /* FHSNewsClientInfoHandler.swift in Sources */,
 				B0D7053429968A7000464078 /* NewsCollectionView.swift in Sources */,
+				B01173DC2A0E6C750072F7CD /* NewsHomeCollectionView.swift in Sources */,
+				B0E5012929FAA6C900AFEAA2 /* FHSTabBarController.swift in Sources */,
+				B05F1F812A15E7D2004A4DE0 /* NewsArticleView.swift in Sources */,
 				F28D423A29685E49008376DC /* SceneDelegate.swift in Sources */,
+				B01173DE2A0E7D4D0072F7CD /* FHSNewsAPIHandler.swift in Sources */,
 				CCFD5774298960780020B8AD /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -433,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -454,12 +480,13 @@
 				DEVELOPMENT_TEAM = RR5WP5NG77;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FHSNewsIOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "FHS News";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,12 +512,13 @@
 				DEVELOPMENT_TEAM = RR5WP5NG77;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FHSNewsIOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "FHS News";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

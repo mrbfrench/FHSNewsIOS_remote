@@ -2,6 +2,8 @@
 
 import UIKit
 
+//UPDATE: THIS FILE IS NO LONGER USED
+
     //TODO: SF Symbols not available on iOS 11/12, make a solution
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -9,14 +11,14 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var tableView : UITableView?
     
-    var newsNames = ["News1","News2"]
+    var newsNames = ["Loading..."]
     var newsImages = [UIImageView.init(image: UIImage.init(named: "SettingsSnoolieIconV2.png"))]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        newsNames.count
     }
     
-    func getArticlesInfo() -> AnyObject? {
+    func getArticlesInfo() {
         /*var urlReq = NSMutableURLRequest.init()
         urlReq.httpMethod = "GET"
         urlReq.url = URL.init(string: "http://76.139.70.221:3000/api/weather")
@@ -38,41 +40,21 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         }*/
         
         //weather Info: http://76.139.70.221:3000/api/weather
-        let url = URL(string: "http://76.139.70.221:3000/ArticlesList.json")!
+        //let url = URL(string: "http://76.139.70.221:3000/ArticlesList.json")!
+        //let url = URL(string: "http://76.139.70.221:3000/api/home")!
+        let url = URL(string: "https://dev-api.fhs-news.org/api/home")!
+    
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        var output: AnyObject?//[String: AnyObject]?
+        //var output: AnyObject?//[String: AnyObject]?
         //output = nil
 
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
                 let data2 = data
-                print(Array(data2))
-                for dict in Array(data2) {
-                    print(dict)
-                }
-                print("ok, we're here now")
-               /*if let jsonArray = JSONSerialization.jsonObject(with: data2, options: .mutableContainers) {
-                    print(jsonArray)
-                } else {
-                    print("NOPE")
-                }*/
                 do {
-                    /*if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:AnyObject] {
-                        print(json)
-                        output = json["data"]?.firstObject as AnyObject?// as? [String : AnyObject]
-                        if ((output) != nil) {
-                            print("success!")
-                            print(output as Any)
-                            self.populateCellsWithArticlesInfo(articleInfo: output)
-                        } else {
-                            print("???? json[data] no work ????")
-                        }
-                    } else {
-                        print("Not JSON...")
-                    }*/
                     let result = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers])
                     let resultArray = result as! NSMutableArray //->This should always work
                     //print(resultArray) //->shows output...
@@ -84,9 +66,15 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
                       print(dict)
                         //if iter is larger than our array, we'd be overflowing it so instead, break
                       if iter >= self.newsNames.count {
-                        break
+                          if (dict["headline"] != nil) {
+                              self.newsNames.append(dict["headline"] as! String? ?? "")
+                          }
+                      } else {
+                          if (dict["headline"] != nil) {
+                              self.newsNames[iter] = dict["headline"] as! String? ?? ""
+                              iter += 1
+                          }
                       }
-                      self.newsNames[iter] = dict["headline"] as! String
                     //TODO: This code is uncommented out since if image cant be get, app will fail to load info! Well actually no but it'll keep trying to load image until error which takes a while... make sure to implement a failsafe if image GET fail, as well as actually implement a valid link to the image
                       /*let urlString = dict["articleThumbnail"] as! String
                       let url = NSURL(string: urlString)! as URL
@@ -94,7 +82,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
                       if let imageData: NSData = NSData(contentsOf: url) {
                         self.newsImages[iter].image = UIImage(data: imageData as Data)
                       }*/
-                      iter += 1
+                      
                     }
                     if iter > 0 {
                       iter = 0
@@ -112,7 +100,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         task.resume()
         
-        return output
+        //return output
     }
     
     func populateCellsWithArticlesInfo(articleInfo: AnyObject?) {
@@ -155,6 +143,13 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @objc func didTapCell(sender: UITapGestureRecognizer) {
         print("tapped")
+        //self.present(ViewController.init(), animated: true)
+        //self.present(NewsHomeViewController.init(), animated: true)
+        //https://stackoverflow.com/questions/24099533/swift-presentviewcontroller#:~:text=Try%20this%3A%20let%20vc%20%3D%20ViewController%20%28%29%20%2F%2Fchange,With%20Swift3%3A%20self.present%20%28vc%2C%20animated%3A%20true%2C%20completion%3A%20nil%29
+        let viewController = NewsHomeViewController()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true)
         /*if let articleInfo = getArticlesInfo() {
             populateCellsWithArticlesInfo(articleInfo: articleInfo)
         } else {
